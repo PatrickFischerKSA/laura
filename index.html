@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Capricorn – Think-Backwards-Game (Browser)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <header class="header">
+    <h1>Capricorn – Think Backwards</h1>
+    <p>Rekonstruiere eine rückwärts gerichtete Kausalkette, die den Endzustand erklärt und die Regeln erfüllt.</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h2>Level</h2>
+      <label for="levelSelect">Level wählen:</label>
+      <select id="levelSelect"></select>
+
+      <div id="metaBox" class="card">
+        <h3>Endzustand</h3>
+        <p id="endState"></p>
+        <p class="meta" id="metaInfo"></p>
+      </div>
+
+      <div class="card">
+        <h3>Hinweise</h3>
+        <ul id="clueList"></ul>
+      </div>
+
+      <button id="hintBtn" class="secondary">Hinweis anzeigen</button>
+      <p id="hintText" class="hint"></p>
+    </section>
+
+    <section class="panel">
+      <div class="card">
+        <h2>Mögliche Ursachen</h2>
+        <p>Klicke auf eine Ursache, um sie zur Kette hinzuzufügen. Danach wähle die Art der Beziehung.</p>
+        <ul id="causeList"></ul>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="card">
+        <h2>Deine Kette (von END rückwärts)</h2>
+        <p>END: <span id="endStateShort"></span></p>
+        <ul id="chainList"></ul>
+        <div class="chain-actions">
+          <button id="clearChain" class="secondary">Kette löschen</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Check</h2>
+        <button id="validateBtn">Hypothese prüfen</button>
+        <ul id="feedbackList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="code-section">
+    <h2>Python-Version (Platz für den vollständigen Code)</h2>
+    <p>Kopiere hier bei Bedarf den kompletten Python-Code aus dem Chat und speichere ihn lokal als <code>capricorn.py</code>.</p>
+    <details>
+      <summary>Python-Code einblenden</summary>
+      <pre><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Capricorn — Think Backwards Game (CLI)
+# Vollständiger Python-Code wie im Chat-Verlauf.
+# Speichere ihn lokal als capricorn.py und starte mit: python3 capricorn.py
+</code></pre>
+    </details>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
